@@ -1,9 +1,11 @@
-var TopDownGame = TopDownGame || {};
-
-TopDownGame.game = new Phaser.Game(400, 220, Phaser.AUTO, '');
-
-TopDownGame.game.state.add('Boot', TopDownGame.Boot);
-TopDownGame.game.state.add('Preload', TopDownGame.Preload);
-TopDownGame.game.state.add('Game', TopDownGame.Game);
-
-TopDownGame.game.state.start('Boot');
+// Initialize Phaser
+var game = new Phaser.Game(400, 220, Phaser.AUTO, '');
+// Define our global variable
+game.global = {
+};
+// Add all the states
+game.state.add('boot', bootState);
+game.state.add('load', loadState);
+game.state.add('Game', gameState);
+// Start the 'boot' state
+game.state.start('boot');

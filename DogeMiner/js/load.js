@@ -34,7 +34,7 @@ var loadState = {
 		game.load.audio('music', ['assets/music.ogg', 'assets/music.ogg']);
     },
     create: function() {
-        // Go to the menu state
+        // Go to the menu state 
         game.state.start('menu');
     }
 };

@@ -44,12 +44,6 @@ var level2State = {
         this.enemies.createMultiple(10, 'enemy');
         game.time.events.loop(2200, this.addEnemy, this);
 		
-		//Play the music when the play state starts
-		//this.music = game.add.audio('music'); // Add the music
-		//this.music.loop = true; // Make it loop
-		//this.music.volume = 0.6;// Set the volume
-		//this.music.play();		// Start the music
-		
 		// Create the emitter with 15 particles. We don't need to set the x y, since we don't know where to do the explosion yet
 		this.emitter = game.add.emitter(0, 0, 15);
 
@@ -243,7 +237,6 @@ var level2State = {
 			// Start the emitter by exploding 15 particles that will live 800ms
 			this.emitter.start(true, 800, null, 15);
 			this.deadSound.play();
-			this.music.fadeOut(1000);
 			// Flash the color white for 300ms
 			game.camera.flash(0xffffff, 300);
 			// Shake for 300ms with an intensity of 0.02

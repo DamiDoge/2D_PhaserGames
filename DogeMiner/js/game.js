@@ -4,7 +4,8 @@ var game = new Phaser.Game(500, 340);
 game.global = {
     score: 0,
 	death: 0,
-    playerx: game.width/3
+    playerx: game.width/3,
+    musicStart: false
 };
 // Add all the states
 game.state.add('boot', bootState);
