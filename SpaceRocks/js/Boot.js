@@ -1,9 +1,4 @@
-var SpaceHipster = SpaceHipster || {};
-
-SpaceHipster.Boot = function(){};
-
-//setting game configuration and loading the assets for the loading screen
-SpaceHipster.Boot.prototype = {
+var bootState = {
   preload: function() {
   	//assets we'll use in the loading screen
     this.load.image('logo', 'assets/images/logo.png');

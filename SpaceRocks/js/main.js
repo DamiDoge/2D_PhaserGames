@@ -7,9 +7,9 @@ SpaceHipster.global = {
 	asteroidSize : 0
 }
 
-SpaceHipster.game.state.add('Boot', SpaceHipster.Boot);
-SpaceHipster.game.state.add('Preload', SpaceHipster.Preload);
-SpaceHipster.game.state.add('MainMenu', SpaceHipster.MainMenu);
-SpaceHipster.game.state.add('Game', SpaceHipster.Game);
+SpaceHipster.game.state.add('Boot', bootState);
+SpaceHipster.game.state.add('Preload', loadState);
+SpaceHipster.game.state.add('MainMenu', menuState);
+SpaceHipster.game.state.add('Game', gameState);
 
 SpaceHipster.game.state.start('Boot');
