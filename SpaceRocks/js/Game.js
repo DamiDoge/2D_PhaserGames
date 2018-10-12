@@ -81,6 +81,9 @@ var gameState = {
 		{
 			this.movePlayer();
 		}
+
+		this.screenWrap(this.player);
+		this.bullets.forEachExists(this.screenWrap, this);
 	
 		//overlapping between player and collectables
 		this.game.physics.arcade.overlap(this.player, this.collectables, this.collect, null, this);
@@ -185,8 +188,6 @@ var gameState = {
 		if (this.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
 			this.fireBullet();
 		}
-		this.screenWrap(this.player);
-		this.bullets.forEachExists(this.screenWrap, this);
 	},
 	accelerate: function () {
 		this.game.physics.arcade.accelerationFromRotation(this.player.rotation, 200, this.player.body.acceleration);
